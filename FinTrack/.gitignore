@@ -1,0 +1,28 @@
+
+# Node
+node_modules/
+frontend/dist/
+npm-debug.log*
+
+# Java / Maven
+backend/target/
+*.class
+
+# IDE
+.idea/
+.vscode/
+.settings/
+.classpath
+.project
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local configuration containing credentials
+application-local.properties
+
+# Operating system
+.DS_Store
+Thumbs.db

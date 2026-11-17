@@ -1,0 +1,9 @@
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { ResponsiveContainer, AreaChart, Area, CartesianGrid, XAxis, YAxis, Tooltip, Legend, PieChart, Pie, Cell } from 'recharts';
+import { Activity, AlertOctagon, ArrowDownLeft, ArrowLeft, ArrowLeftRight, ArrowRight, ArrowUpRight, Bell, CalendarDays, ChartNoAxesCombined, CheckCircle2, ChevronDown, CircleDollarSign, ClipboardList, CreditCard, Download, FileText, Gauge, Home, LayoutDashboard, Leaf, ListChecks, LogIn, LogOut, Menu, Plus, Repeat2, Search, ShieldAlert, Sparkles, TrendingDown, TrendingUp, UserRound, Users, Wallet, X, Zap } from 'lucide-react';
+import { Heading, Panel, Stat, Quick, Empty, TransactionTable, monthlySeries, categorySeries } from "../components/Shared.jsx";
+import { money, today } from "../components/Shared.jsx";
+
+export function DailyPage({expenses,onDelete}) { const [date,setDate]=useState(today()); const rows=expenses.filter(e=>e.date===date); const spent=rows.filter(e=>e.type==='EXPENSE').reduce((s,e)=>s+Number(e.amount),0); const income=rows.filter(e=>e.type==='INCOME').reduce((s,e)=>s+Number(e.amount),0); return <><Heading tag="DAILY TRACKING" title="Daily expenses" subtitle="Review all income and expenses recorded on a selected day."/><div className="toolbar"><label>Select date <input type="date" value={date} onChange={e=>setDate(e.target.value)}/></label></div><div className="stats-grid three"><Stat label="Daily expenses" value={money(spent)} icon={TrendingDown} tone="orange" foot="Total spent on this date"/><Stat label="Daily income" value={money(income)} icon={TrendingUp} tone="green" foot="Total income on this date"/><Stat label="Transactions" value={rows.length} icon={ListChecks} tone="blue" foot="Recorded entries"/></div><Panel title={`Transactions on ${date}`} sub="Day-wise transaction list"><TransactionTable rows={rows} onDelete={onDelete}/></Panel></>; }
+export default DailyPage;
