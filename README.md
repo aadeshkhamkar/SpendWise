@@ -733,7 +733,7 @@ git push origin feature/your-feature
 **Aadesh Khamkar**
 
 - GitHub: [@aadeshkhamkar](https://github.com/aadeshkhamkar)
-- Portfolio: [aadeshkhamkar.netlify.app](https://aadeshkhamkar.vercel.app/)
+- Portfolio: [aadeshkhamkar.vercel.app](https://aadeshkhamkar.vercel.app/)
 
 **Repository:** [SpendWise – GitHub](https://github.com/aadeshkhamkar/SpendWise)
 
@@ -746,5 +746,5 @@ git push origin feature/your-feature
 <h3 align="center">💰 SpendWise – Track Smarter. Spend Better.</h3>
 
 <p align="center">
-  Made with ❤️ by <strong>Aadesh Khamkar</strong>
+  Made with ❤️ by <strong>Aadesh Balvant Khamkar & Apeksha Nagnath Yechwad </strong>
 </p>
